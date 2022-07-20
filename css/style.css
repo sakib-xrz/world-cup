@@ -35,6 +35,17 @@ h4{
     color: #161616;
 }
 
+h5{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: #161616;
+    display: flex;
+    align-items: center;
+}
+
 p{
     font-size: 1rem;
     font-style: normal;
@@ -91,14 +102,22 @@ header .image-area img{
     width: 90%;
 }
 
-.header-button{
+header .header-button{
     border: none;
     background-color: #DD0000;
     padding: 16px 25px;
     border-radius: 5px;
     margin-top: 30px;
+    transition: .4s;
 }
 
+header .header-button:hover{
+    background-color: #FFFFFF;
+}
+
+header .header-button:hover a{
+    color: #DD0000;
+}
 /* header section end  */
 
 
@@ -125,11 +144,11 @@ article .side-menu button:last-child{
     margin-bottom: 0px;
 }
 
-article .side-menu .active{
+article .side-menu .active, article .side-menu button:hover{
     background-color: #DD0000;
 }
 
-article .active a{
+article .active a, article .side-menu button:hover a{
     color: #FFFFFF;
     font-weight: 600;
 }
@@ -157,6 +176,7 @@ article .card-items{
     gap: 24px;
 }
 
+/* css start for card  */
 article .card{
     border: 1px solid #E8E8E8;
     border-radius: 10px;
@@ -192,6 +212,33 @@ article .card p{
     color: #161616B2;
     margin-right: 40px;
 }
+/* css end for card  */
+
+/* css start for fixture  */
+article .fixture{
+    width: 312px;
+    height: 242px;
+    border: 1px solid #E8E8E8;
+    border-radius: 10px;
+    padding: 52px 30px;
+}
+
+article .teams{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+article .fixture h4{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+article .fixture p{
+    color: #4D4D4D;
+    text-align: center;
+}
+/* css end for fixture  */
 
 /* article section end  */
 
@@ -246,3 +293,119 @@ footer .social-icon a:last-child{
     margin-right: 0px;
 }
 /* footer section end  */
+
+
+/* ----------
+Responsive
+---------  */
+
+/* mobile device  */
+@media only screen and (max-width: 576px){
+    h1{
+        font-size: 22px;
+        line-height: 33px;
+    }
+
+    p{
+        font-size: 14px;
+        line-height: 24px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    a{
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    header .main {
+        width: 334px;
+        height: 472px;
+        flex-direction: column;
+        border-radius: 10px;
+        margin: 20px;
+        position: relative;
+    }
+
+    header .text-area {
+        width: 100%;
+        text-align: center;
+        padding: 28px 38px 20px 38px;
+    }
+
+    header .header-button{
+        padding: 8px 12px;
+    }
+
+    header .image-area {
+        width: 100%;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+    }
+
+    header .image-area img {
+        width: 65%;
+        margin-left: 13%;
+    }
+
+    article {
+        margin-bottom: 50px;
+    }
+
+    article .container {
+        flex-direction: column;
+    }    
+
+    article .side-menu {
+        width: 100%;
+        background-color: transparent;
+        margin-top: -16px;
+    }
+
+    article .side-menu button{
+        border: 1px solid #E8E8E8;
+    }
+
+    article .card-items {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+    }
+
+    article .card {
+        width: 85%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    article .fixture {
+        padding: 32px 20px;
+        width: 85%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    footer h2 {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    footer .footer-menu {
+        flex-direction: column;
+        align-items: center;
+        height: 300px;
+        justify-content: space-between;
+    }
+
+    footer .footer-menu p{
+        margin-right: 0px;
+    }
+
+    footer .social-icon {
+        margin-top: 40px;
+        padding-bottom: 40px;
+    }
+}
