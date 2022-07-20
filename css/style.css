@@ -86,6 +86,8 @@ header .text-area{
     padding-top: 111px;
     padding-bottom: 111px;
     padding-left: 106px;
+    display: flex;
+    align-items: center;
 }
 
 header .text-area h1{
@@ -212,6 +214,10 @@ article .card p{
     color: #161616B2;
     margin-right: 40px;
 }
+
+#view-all{
+    display: none;
+}
 /* css end for card  */
 
 /* css start for fixture  */
@@ -237,6 +243,7 @@ article .fixture h4{
 article .fixture p{
     color: #4D4D4D;
     text-align: center;
+    margin: 0 auto;
 }
 /* css end for fixture  */
 
@@ -300,10 +307,15 @@ Responsive
 ---------  */
 
 /* mobile device  */
-@media only screen and (max-width: 576px){
+
+@media only screen and (max-width: 767px){
     h1{
         font-size: 22px;
         line-height: 33px;
+        max-width: 228px;
+    }
+    h5{
+        margin: 0 20px;
     }
 
     p{
@@ -314,6 +326,7 @@ Responsive
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
+        max-width: 258px;
     }
 
     a{
@@ -383,9 +396,13 @@ Responsive
 
     article .fixture {
         padding: 32px 20px;
-        width: 85%;
+        width: auto;
         height: auto;
         margin: 0 auto;
+    }
+
+    article .teams {
+        justify-content: center;
     }
 
     footer h2 {
@@ -407,5 +424,186 @@ Responsive
     footer .social-icon {
         margin-top: 40px;
         padding-bottom: 40px;
+    }
+}
+
+/* tablet device  */
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    h1{
+        font-size: 40px;
+        line-height: 50px;
+        max-width: 290px;
+    }
+    h5{
+        margin: 0 20px;
+    }
+    p{
+        font-size: 14px;
+        line-height: 24px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        max-width: 315px;
+    }
+    a{
+        font-size: 20px;
+        line-height: 23px;
+    }
+    header .main {
+        width: 90%;
+        height: auto;
+    }
+    header .text-area{
+        padding: 40px 10px 50px 50px;
+    }
+    header .header-button{
+        width: 161px;
+        height: 48px;
+        padding: 0px;
+    }
+
+    article{
+        margin-bottom: 60px;
+    }
+
+    article .container {
+        flex-direction: column;
+    }
+
+    article .side-menu{
+        flex-direction: row;
+        width: 90%;
+        margin: 0 auto;
+        justify-content: space-between;
+        background-color: transparent;
+        height: auto;
+        margin-bottom: 50px; 
+    }
+
+    article .side-menu button{
+        margin-bottom: 0;
+        width: 200px;
+        border: 1px solid #E8E8E8;
+    }
+
+    article .card-items {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+    article .teams {
+        justify-content: center;
+    }
+
+    article .fixture {
+        width: auto;
+        padding: 50px 0px;
+    }
+
+    article .card {
+        width: 100%;
+        height: auto;
+    }
+
+    #last-card{
+        display: none;
+    }
+
+    #view-all{
+        display: block;
+        border: none;
+        background-color: #DD0000;
+        width: 131px;
+        height: 47px;
+        border-radius: 5px;
+        margin-top: 30px;
+        transition: .4s;
+        margin: 0 auto;
+    }
+
+    #view-all a{
+        color: #FFFFFF;
+    }
+
+    footer .footer-menu {
+        justify-content: space-evenly;
+    }
+
+    footer .footer-menu p {
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1379px){
+    h1{
+        font-size: 70px;
+        line-height: 80px;
+    }
+    h4{
+        font-size: 15px;
+        line-height: 22px;
+    }
+    h5{
+        margin: 0 20px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 26px;
+    }
+    a{
+        font-size: 20px;
+        line-height: 23px;
+    }
+    header .main {
+        width: 90%;
+        height: auto;
+    }
+    header .text-area{
+        padding: 40px 10px 50px 50px;
+    }
+    header .header-button{
+        width: 161px;
+        height: 48px;
+        padding: 0px;
+    }
+
+    article .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    article .card-items {
+        width: 80%;
+    }
+
+    article .card{
+        width: auto; 
+        height: auto;
+    }
+
+    article .card p {
+        margin-right: 30px;
+    }
+
+    article .fixture {
+        width: auto;
+        height: auto;
+    }
+
+    article .teams {
+        justify-content: center;
+    }
+
+    article #fixture {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    article .side-menu button {
+        width: 200px;
+        height: 60px;
     }
 }
