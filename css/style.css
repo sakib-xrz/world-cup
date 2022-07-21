@@ -79,7 +79,17 @@ header .main{
     background-color: #161616;
     border-radius: 30px;
     margin: 50px 0px;
+    animation: color 10s infinite linear;
 }
+
+@keyframes color {
+    0%   { background: #161616; }
+    20%  { background: #004462; }
+    40%  { background: #008193; }
+    60%  { background: #00bc7c; }
+    80%  { background: #84b41b; }
+    100% { background: #161616; }
+  }
 
 header .text-area{
     width: 50%;
@@ -170,6 +180,7 @@ article .side-menu{
     justify-content: center;
     align-items: center;
     margin-right: 24px;
+    animation: color 10s infinite linear;
 }
 
 article .card-items{
@@ -184,6 +195,12 @@ article .card{
     border-radius: 10px;
     width: 312px;
     height: 362px;
+    transition: transform .04s;
+}
+
+article .card:hover{
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 article .card img{
@@ -220,7 +237,7 @@ article .card p{
 }
 /* css end for card  */
 
-/* css start for fixture  */
+/* fixture start */
 article .fixture{
     width: 312px;
     height: 242px;
@@ -245,7 +262,7 @@ article .fixture p{
     text-align: center;
     margin: 0 auto;
 }
-/* css end for fixture  */
+/* fixture end */
 
 /* article section end  */
 
@@ -255,7 +272,6 @@ article .fixture p{
 footer{
     background-color: #161616;
     width: 100%;
-    /* height: 540px; */
 }
 
 footer h2{
@@ -312,7 +328,7 @@ Responsive
     h1{
         font-size: 22px;
         line-height: 33px;
-        max-width: 228px;
+        text-align: center;
     }
     h5{
         margin: 0 20px;
@@ -326,7 +342,7 @@ Responsive
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
-        max-width: 258px;
+        text-align: center;
     }
 
     a{
@@ -377,6 +393,7 @@ Responsive
         width: 100%;
         background-color: transparent;
         margin-top: -16px;
+        animation: none;
     }
 
     article .side-menu button{
@@ -428,6 +445,7 @@ Responsive
 }
 
 /* tablet device  */
+
 @media only screen and (min-width: 768px) and (max-width: 1023px){
     h1{
         font-size: 40px;
@@ -480,6 +498,7 @@ Responsive
         background-color: transparent;
         height: auto;
         margin-bottom: 50px; 
+        animation: none;
     }
 
     article .side-menu button{
@@ -537,6 +556,8 @@ Responsive
         margin-right: 0px;
     }
 }
+
+/* large device  */ 
 
 @media only screen and (min-width: 1024px) and (max-width: 1379px){
     h1{
